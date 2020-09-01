@@ -18,8 +18,7 @@ class Barista extends Component {
   makeCoffee = () => {
     this.setState({ baristaBusy: true });
     const { orders, coffees, finishOrder } = this.props;
-    const [coffee] = orders;
-    const orderTimeMilliseconds = coffees[coffee] * 1000;
+    const orderTimeMilliseconds = coffees[orders[0]] * 1000;
     this.preparationTimerId = setTimeout(() => {
       finishOrder(this.freeUpBarista);
     }, orderTimeMilliseconds);
@@ -36,16 +35,16 @@ class Barista extends Component {
   }
 
   render() {
-    const {
-      coffees,
-      orders: [coffee],
-    } = this.props;
+    const { coffees, orders } = this.props;
     return (
       <p className="barista">
         Barista:{' '}
         <span className="status">
           {this.state.baristaBusy ? (
-            <CoffeeMaker coffee={coffee} prepTimeSeconds={coffees[coffee]} />
+            <CoffeeMaker
+              coffee={orders[0]}
+              prepTimeSeconds={coffees[orders[0]]}
+            />
           ) : (
             <span>
               idle{' '}
