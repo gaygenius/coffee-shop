@@ -4,7 +4,7 @@ class Menu extends Component {
   render() {
     const { coffees, addOrder } = this.props;
     return (
-      <div className="container">
+      <div className="container" data-testid="Menu">
         <h1 className="title">Menu</h1>
         <ul>
           {Object.entries(coffees).map(([coffee, _]) => (

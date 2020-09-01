@@ -4,7 +4,9 @@ import CoffeeQueue from './components/CoffeeQueue';
 import Barista from './components/Barista';
 import './App.css';
 
-// drink data
+const FINISHED_ORDER_EXPIRATION = 5000; // msecs
+
+// coffee types and number of seconds it takes to brew each one
 const coffees = {
   mocha: 1,
   chai: 2,
@@ -48,7 +50,7 @@ class App extends Component {
         this.setState(({ finished: [_, ...remainingFinishedOrders] }) => ({
           finished: remainingFinishedOrders,
         }));
-      }, 3000)
+      }, FINISHED_ORDER_EXPIRATION)
     );
   };
 

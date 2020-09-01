@@ -1,7 +1,7 @@
 import React from 'react';
 
 const CoffeeQueue = ({ title, orders }) => (
-  <div className="container">
+  <div className="container" data-testid={title}>
     <h1 className="title">{title}</h1>
     <ul>
       {orders.map((order, index) => (
