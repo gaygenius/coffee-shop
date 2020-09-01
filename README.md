@@ -2,6 +2,8 @@
 
 A virtual coffee shop where coffee orders are queued and delivered to a finished queue.
 
+Try it out in [CodeSandbox](https://codesandbox.io/s/intelligent-lederberg-frw71).
+
 <img width="654" alt="Screen Shot 2020-08-31 at 10 58 18 PM" src="https://user-images.githubusercontent.com/890659/91800734-618b2f00-ebde-11ea-8e60-a5945220fa07.png">
 
 ## Description
