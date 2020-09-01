@@ -23,8 +23,9 @@ class CoffeeMaker extends Component {
   render() {
     return (
       <span>
-        {this.props.coffee} will be ready in{' '}
+        {this.props.coffee} will be ready in{'  '}
         {'⏰'.repeat(this.state.remainingSeconds)}
+        {'  '}
         {this.state.remainingSeconds} sec
         {this.state.remainingSeconds === 1 ? '' : 's'}
       </span>

@@ -1,6 +1,7 @@
 body {
   color: white;
-  background: black;
+  background: darkred;
+  margin: 10px;
 }
 
 * {
@@ -33,7 +34,7 @@ li {
 .item {
   list-style-type: none;
   padding: 10px;
-  border: 1px solid brown;
+  border: 1px solid pink;
 }
 
 .barista {
